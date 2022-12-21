@@ -12,6 +12,15 @@ class UserService {
     return axios.get(API_URL);
   }
 
+  addTraffic(id, streetTo, streetFrom, grade){
+    const traffic = {
+      grade: grade,
+      titleStreetFrom: streetFrom,
+      titleStreetTo: streetTo
+    }
+    return axios.post(API_URL+id+"/traffic", traffic, {headers: authHeader()});
+  }
+
   getUserBoard() {
     return axios.get(API_URL + 'user', { headers: authHeader() });
   }

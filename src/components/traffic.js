@@ -3,7 +3,6 @@
 // import userService from "../services/user.service";
 // import { Link } from 'react-router-dom';
 
-
 // export default class Traffic extends Component {
 //   constructor(props) {
 //     super(props);
@@ -24,10 +23,10 @@
 //       var trafficList = street.trafficList.map( traf => <>
 //         <tr>
 //         <td width="20%">
-//           {traf.titleStreetFrom} 
+//           {traf.titleStreetFrom}
 //         </td>
 //         <td width="20%">
-//         {traf.titleStreetTo} 
+//         {traf.titleStreetTo}
 //         </td>
 //         <td width="30%">
 //         {traf.grade}
@@ -65,20 +64,25 @@
 //   }
 // }
 
-import React, { useEffect, useState, Component } from 'react'
-import Example, { Table } from './Table';
+import React, { Component } from "react";
+import {Link} from 'react-router-dom';
+import { Button } from 'reactstrap';
 
+import AllTrafficTable from "./tables/allTrafficTable";
 
 export default class Traffic extends Component {
   constructor(props) {
     super(props);
   }
 
-
   render() {
     return (
-        <Example/>
+      <>
+        <Link to="/traffic/new">
+          <Button outline color="success">Добавить пробку</Button>
+        </Link>
+        <AllTrafficTable />
+      </>
     );
   }
 }
-

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import MaterialReactTable from 'material-react-table';
-import userService from "../services/user.service";
+import userService from "../../services/user.service";
 import { useEffect } from 'react';
 
-const Example = () => {
+const AllTrafficTable = () => {
 
   const [data, setData] = useState([]);
   
@@ -18,7 +18,7 @@ const Example = () => {
   useEffect(()=>{
     userService.getPublicContent()
     .then(response => setData(response.data))
-  })
+  }, [])
 
   return <MaterialReactTable 
     columns={columns} 
@@ -28,4 +28,4 @@ const Example = () => {
     />;
 };
 
-export default Example;
+export default AllTrafficTable;
