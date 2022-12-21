@@ -8,7 +8,7 @@ const AllTrafficTable = () => {
   const [data, setData] = useState([]);
   
   const columns = [
-    {header: "Id", accessorKey: "idTraffic"},
+    {header: "Id", accessorKey: "idTraffic", enableGrouping: false},
     {header: "Улица", accessorKey: "titleStreet"},
     {header: "Начало пробки", accessorKey: "titleStreetFrom"},
     {header: "Конец пробки", accessorKey: "titleStreetTo"},
@@ -24,7 +24,11 @@ const AllTrafficTable = () => {
     columns={columns} 
     data={data} 
     enableGrouping
-    initialState={{ columnVisibility: { idTraffic: false } }}
+    initialState={{ 
+      columnVisibility: { idTraffic: false },
+      grouping: ['titleStreet'],
+      expanded: true,
+    }}
     />;
 };
 

@@ -37,6 +37,8 @@ const AddTrafficTable = () => {
     console.log("streetTo", streetTo);
     console.log("Grade", grade);
     userService.addTraffic(streetId, streetTo, streetFrom, grade);
+
+    
   };
 
   return (
@@ -92,10 +94,11 @@ const AddTrafficTable = () => {
           placeholder="Grade"
           value={grade}
           onChange={handleChangeGrade}
-          min = "0"
-          max = "10"
+          min="0"
+          max="10"
         />
-
+        <br />
+        <br />
         <button className="btn btn-primary" onClick={saveBtn}>
           Save
         </button>
