@@ -7,14 +7,11 @@ import AuthService from "./services/auth.service";
 
 import Login from "./components/login";
 import Register from "./components/register";
-import Home from "./components/home";
 import Profile from "./components/profile";
-import BoardUser from "./components/board-user";
-import BoardModerator from "./components/board-moderator";
-import BoardAdmin from "./components/board-admin";
-
+import CreateTraffic from "./components/createTraffic";
 // import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
+import Traffic from "./components/traffic";
 
 class App extends Component {
   constructor(props) {
@@ -64,7 +61,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/"} className="navbar-brand">
-            bezKoder
+            TrafficMap
           </Link>
           <div className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -130,18 +127,14 @@ class App extends Component {
 
         <div className="container mt-3">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Traffic />} />
+            <Route path="/traffic" element={<Traffic />} />
+            <Route path="/traffic/new" element={<CreateTraffic />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/user" element={<BoardUser />} />
-            <Route path="/mod" element={<BoardModerator />} />
-            <Route path="/admin" element={<BoardAdmin />} />
           </Routes>
         </div>
-
-        {/* <AuthVerify logOut={this.logOut}/> */}
       </div>
     );
   }
