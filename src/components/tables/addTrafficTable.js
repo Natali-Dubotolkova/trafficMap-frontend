@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import userService from "../../services/user.service";
+import { Button } from 'reactstrap';
+import {Link} from 'react-router-dom';
+
 
 const AddTrafficTable = () => {
   const [streetId, setStreetId] = useState("");
@@ -38,7 +41,7 @@ const AddTrafficTable = () => {
     console.log("Grade", grade);
     userService.addTraffic(streetId, streetTo, streetFrom, grade);
 
-    
+    window.location.reload(true);
   };
 
   return (
@@ -99,9 +102,11 @@ const AddTrafficTable = () => {
         />
         <br />
         <br />
-        <button className="btn btn-primary" onClick={saveBtn}>
-          Save
-        </button>
+        <Link to="/">
+          <Button className="btn btn-primary" onClick={saveBtn}>
+            Save
+          </Button>
+        </Link>
       </div>
     </div>
   );
