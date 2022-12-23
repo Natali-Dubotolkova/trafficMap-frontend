@@ -35,8 +35,8 @@ export default class Street extends Component {
     return (
       <>
       {(this.state.userReady & (this.state.role == 'ROLE_ADMIN' || this.state.role == 'ROLE_MODERATOR')) ?
-        <Link to="/traffic/new">
-          <Button outline color="success">Добавить пробку</Button>
+        <Link to="/street/new">
+          <Button outline color="success">Добавить улицу</Button>
         </Link>: null}
         <AllStreetTable />
       </>

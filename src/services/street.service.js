@@ -10,9 +10,9 @@ class StreetService {
 
   addStreet(title){
     const street = {
-      title: title
+      streetTitle: title
     }
-    return axios.post(API_URL+"add", street, {headers: authHeader()});
+    return axios.post(API_URL, street, {headers: authHeader()});
   }
 
   deleteStreet(id){

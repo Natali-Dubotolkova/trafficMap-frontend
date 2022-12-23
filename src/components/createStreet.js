@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import AddTrafficTable from './tables/addTrafficTable';
+import AddStreetTable from './tables/addStreetTable';
 import AuthService from "../services/auth.service";
 import { Navigate } from "react-router-dom";
 
-export default class Traffic extends Component {
+export default class Street extends Component {
   constructor(props) {
     super(props);
 
@@ -30,7 +30,7 @@ export default class Traffic extends Component {
     return (
       <div className="container">
         {(this.state.userReady) ?
-          <AddTrafficTable/>
+          <AddStreetTable/>
           : null}
         </div>
     );

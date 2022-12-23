@@ -104,7 +104,7 @@ const AddTrafficTable = () => {
         <br />
         <Link to="/">
           <Button className="btn btn-primary" onClick={saveBtn}>
-            Save
+            Сохранить
           </Button>
         </Link>
       </div>

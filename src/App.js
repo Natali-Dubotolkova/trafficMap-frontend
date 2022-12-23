@@ -9,6 +9,7 @@ import Login from "./components/login";
 import Register from "./components/register";
 import Profile from "./components/profile";
 import CreateTraffic from "./components/createTraffic";
+import CreateStreet from "./components/createStreet";
 // import AuthVerify from "./common/auth-verify";
 import EventBus from "./common/EventBus";
 import Traffic from "./components/traffic";
@@ -121,6 +122,7 @@ class App extends Component {
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/streets" element={<Street />} />
+            <Route path="/street/new" element={<CreateStreet />} />
           </Routes>
         </div>
       </div>
